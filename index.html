@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Treehouse Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="../css/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="css/OrginalStyleSheet.css" rel="stylesheet" type="text/css" />
+    <style type="text/css" media="screen">
+        @import url(http://fonts.googleapis.com/css?family=Varela+Round);
+    </style>
+
+    <script>
+        function goto_UserProfile() {
+            window.location.assign("profile.html")
+        }
+    </script>
+
+</head>
+<body>
+    <img src="http://i.imgur.com/VKKm0pn.png" alt="Magnifying Glass" id="searchIcon">
+    <!--    <form action="/" method="POST">
+        <input type="text" placeholder="Enter a Treehouse username" id="username" name="username">
+        <input type="submit" value="search" class="button">
+    </form>-->
+    <input type="text" placeholder="Enter a Treehouse username" id="Text1" name="username">
+    <!--    <input type="button" value="search" class="button" onclick="goto_UserProfile();">
+-->
+    <button class="input_plus button" onclick="goto_UserProfile();">
+        search
+    </button>
+
+    <script src="scripts/eventfy.js"></script>
+
+    <script src="scripts/xml_http_profile.js"></script>
+
+    <script src="scripts/app.js"></script>
+
+</body>
+</html>
