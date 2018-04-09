@@ -28,24 +28,27 @@ function Profile(username) {
   xmlhttp.send();
 
 
-  xmlhttp.onreadystatechange = function() {
+xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      try {
-        //Parse the data
-        var profile = JSON.parse(this.responseText);
-        profileEmitter.emit("end", profile);
-      } catch (error) {
-        profileEmitter.emit("error", error);
-      }
+        try {
+            //Parse the data
+            var profile = JSON.parse(this.responseText);
+            profileEmitter.emit("end", profile);
+        } 
+        catch (error) {
+            profileEmitter.emit("error", error);
+        }
     }
-  };
+    if (this.readyState == 4 && this.status >= 400 ) {
+        var code = this.status;
+        this.abort();// this line might not be needed.
+        //Status Code Error
+        profileEmitter.emit("error", new Error("There was an error getting the profile " + username + " for you. ( status code: " + code + ")"));
+    }
+};
 
 
-//  if (response.statusCode !== 200) {
-//    request.abort();
-//    //Status Code Error
-//    profileEmitter.emit("error", new Error("There was an error getting the profile for " + username + ". (" + http.STATUS_CODES[response.statusCode] + ")"));
-//  }
+
 
 
 

@@ -6,35 +6,73 @@
     <title>Treehouse Profile</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
-    <link href="../css/normalize.css" rel="stylesheet" type="text/css" />
-    <link href="css/OrginalStyleSheet.css" rel="stylesheet" type="text/css" />
+    <link href="css/fontawesome-all.min.css" rel="stylesheet" type="text/css" />
+    <!--    <link href="css/normalize.css" rel="stylesheet" type="text/css" />
+--><link href="mycss/finialStyleSheet.css" rel="stylesheet" type="text/css" />
+  
+  <!--  <link href="mycss/OrginalStyleSheet.css" rel="stylesheet" type="text/css" />
+    <link href="mycss/oldStyleSheet.css" rel="stylesheet" type="text/css" />
+    <link href="mycss/StyleSheet.css" rel="stylesheet" type="text/css" />-->
     <style type="text/css" media="screen">
         @import url(http://fonts.googleapis.com/css?family=Varela+Round);
     </style>
+    
+    <script type="text/javascript">
 
-    <script>
 
     </script>
 
 </head>
 <body>
-    <img src="http://i.imgur.com/VKKm0pn.png" alt="Magnifying Glass" id="searchIcon">
-    <!--    <form action="/" method="POST">
-        <input type="text" placeholder="Enter a Treehouse username" id="username" name="username">
-        <input type="submit" value="search" class="button">
-    </form>-->
-    <input type="text" placeholder="Enter a Treehouse username" id="Text1" name="username">
-    <!--    <input type="button" value="search" class="button" onclick="goto_UserProfile();">
--->
-    <button class="input_plus button" onclick="goto_UserProfile('Text1');">
-        search
-    </button>
+    <!-- wrapper for styling purposes -->
+    <div class="wrapper">
+        <!-- Naviagation-->
+        <nav>
+            <ul class="main-nav">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li class="right">
+                    <div class="search-container">
+                        <i class="fa fa-search"></i>
+                        <label for="idZipcode">
+                            Enter a Treehouse username:</label>
+                        <input id="username_id1" placeholder="Search.." type="text" onkeyup="on_enter_pressed(event);" >
+                        <button type="button" onclick="goto_UserProfile('username_id1');">
+                            search</button>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <!--( <div> tag used to keep the fixed Main Navigation from overlapping.)  -->
+        <div class="main">
+              
+        
+            <div id="home_Display" class="card">
+                <span id="error_Display"></span>
+                <img src="http://i.imgur.com/VKKm0pn.png" alt="Magnifying Glass" id="searchIcon">
+                 <input id="username_id2" type="text" placeholder="Enter a Treehouse username" name="username">
+                <button class="input_plus button" onclick="goto_UserProfile('username_id2');">
+                    search
+                </button>
+            </div>
+            <span id="search_Display"></span>
+        </div>
+        <!-- footer -->
+        <footer>
+            <small>
+                <p>
+                    &copy; 2018 My Home</p>
+                <p>
+                    Follow me on <a href="https://www.facebook.com/drake.matfield" target="_blank">Facebook</a>, <a href="https://github.com/DrakeMatfield" target="_blank">github</a>
+                    and <a href="https://www.instagram.com/drakematfield/" target="_blank">Instagram</a></p>
+            </small>
+        </footer>
+    </div>
+    
+    
+               <script src="scripts/eventfy.js"></script>
 
-    <script src="scripts/eventfy.js"></script>
+            <script src="scripts/xml_http_profile.js"></script>
 
-    <script src="scripts/xml_http_profile.js"></script>
-
-    <script src="scripts/app.js"></script>
-
+            <script src="scripts/app.js"></script>
 </body>
 </html>
