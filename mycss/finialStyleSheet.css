@@ -122,14 +122,16 @@ a, a:visited
     text-decoration: none;
 }
 
-ul:not(ul.main-nav)
+
+.main ul
 {
     list-style-type: none;
     padding: 0px;
     margin: 40px 0 0;
 }
 
-li:not(ul.main-nav li)
+
+.main li
 {
     display: inline-block;
     width: 100%;
@@ -137,6 +139,23 @@ li:not(ul.main-nav li)
     margin: 0;
     border-top: 1px solid #D5DDE4;
 }
+/*  dddddddddddddddddddddddddddddddddddddddd */
+/*ul.main-nav*/
+/*{*/
+/*    list-style-type: none;*/
+/*    padding: 0px;*/
+/*    margin: 0;*/
+/*}*/
+
+/*ul.main-nav li*/
+/*{*/
+/*    display: inline-block;*/
+/*    width: 100%;*/
+/*    padding: 22px 0;*/
+/*    margin: 0;*/
+/*    border-top: 1px solid #D5DDE4;*/
+/*}*/
+
 
 span
 {
